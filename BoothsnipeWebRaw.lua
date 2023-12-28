@@ -1,5 +1,4 @@
 local Booths_Broadcast = game:GetService("ReplicatedStorage").Network:WaitForChild("Booths_Broadcast")
-local Exclusives = require(game.ReplicatedStorage:WaitForChild('Library'))
 
 if not getgenv().a then
     getgenv().a = true
@@ -96,20 +95,14 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
     )
 end
 
-local function checklisting(uid, gems, item, version, shiny, amount, username, playerid , itemdata)
+local function checklisting(uid, gems, item, version, shiny, amount, username, playerid)
     gems = tonumber(gems)
-    local typee = {}
-    pcall(function()
-    typee = Exclusives.Directory.Pets[item]
-    end)
+
     if string.find(item, "Huge") and gems <= 1000000 then
         bought = game:GetService("ReplicatedStorage").Network.s_RequestPurchase:InvokeServer(playerID, uid)
         if bought == true then
             processListingInfo(uid, gems, item, version, shiny, amount, username)
         end
-    
-    elseif typee.exclusiveLevel and itemdata['class'] == "Pet" and gems <= 5000 then
-        game:GetService("ReplicatedStorage").Network.s_RequestPurchase:InvokeServer(playerid, uid)
 
     elseif gems <= 5 then
         game:GetService("ReplicatedStorage").Network.s_RequestPurchase:InvokeServer(playerid, uid)
@@ -211,9 +204,6 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
     elseif item == "Charm Stone" and gems <= 40000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	    processListingInfo(uid, gems, item, version, shiny, amount, username)
-
-    
-
     end
 end
 
@@ -235,7 +225,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                         local version = data["pt"]
                         local shiny = data["sh"]
                         local amount = data["_am"]
-                        checklisting(uid, gems, item, version, shiny, amount, username , playerID , itemdata)
+                        checklisting(uid, gems, item, version, shiny, amount, username , playerID)
                     end
                 end
             end
