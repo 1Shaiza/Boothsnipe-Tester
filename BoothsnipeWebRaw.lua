@@ -32,7 +32,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
                         local version = data["pt"]
                         local shiny = data["sh"]
                         local amount = data["_am"]
-                        checklisting(uid, gems, item, version, shiny, amount, username , playerID)
+                        checklisting(uid, gems, item, version, shiny, amount, username , playerID , itemdata)
                     end
                 end
             end
