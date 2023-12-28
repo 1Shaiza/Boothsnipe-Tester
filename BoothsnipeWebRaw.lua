@@ -108,7 +108,7 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
             processListingInfo(uid, gems, item, version, shiny, amount, username)
         end
     
-    elseif typee.exclusiveLevel and value["ItemData"]['class'] == "Pet" and gems <= 5000 then
+    elseif typee.exclusiveLevel and class == "Pet" and gems <= 5000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 
     elseif gems <= 5 then
