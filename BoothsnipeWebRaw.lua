@@ -1,5 +1,4 @@
 local Exclusives = require(game.ReplicatedStorage:WaitForChild('Library'))
-
 local Booths_Broadcast = game:GetService("ReplicatedStorage").Network:WaitForChild("Booths_Broadcast")
 Booths_Broadcast.OnClientEvent:Connect(function(username, message)
     if type(message) == "table" and message['PlayerID'] then
@@ -12,7 +11,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
             local amount = tonumber(data["_am"]) or 1
             local exclusive = false
             if class == "Pet" then
-                if exclusive = Exclusives.Directory.Pets[item].exclusiveLevel and gems <= 5000 then
+                if Exclusives.Directory.Pets[item].exclusiveLevel and gems <= 5000 then
                     game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerID, uid)
                 end
             end
