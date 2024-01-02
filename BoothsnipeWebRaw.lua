@@ -193,25 +193,24 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
         local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
    elseif class == "Charm" and price <= 15000 then
-        local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
    elseif class == "Enchant" and price <= 1000 then
-        local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
    elseif class == "Potion" and price <= 1000 then
-        local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
+       game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
    elseif class == "Fruit" and price <= 1000 then
-        local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
    elseif class == "Misc" and price <= 1000 then
-        local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
    elseif class == "Egg" and price <= 1000 then
-        local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 	processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)
-   elseif gems == 1 and snipeNormalPets == true then
-	snipeNormal = true
+   elseif gems == 1 
 	local boughtPet, boughtMessage = purchase:InvokeServer(playerid, uid)
         processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, ping)  
     end
