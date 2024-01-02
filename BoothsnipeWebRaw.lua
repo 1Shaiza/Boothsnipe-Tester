@@ -1,6 +1,3 @@
-local osclock = os.clock()
-repeat task.wait() until game:IsLoaded()
-
 setfpscap(10)
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 local Booths_Broadcast = game:GetService("ReplicatedStorage").Network:WaitForChild("Booths_Broadcast")
@@ -22,14 +19,6 @@ Players.LocalPlayer.Idled:connect(function()
    task.wait(1)
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
-
-for i = 1, PlayerInServer do
-   for ii = 1,#alts do
-        if getPlayers[i].Name == alts[ii] and alts[ii] ~= Players.LocalPlayer.Name then
-            jumpToServer()
-        end
-    end
-end
 
 local function processListingInfo(uid, gems, item, version, shiny, amount, boughtFrom, boughtStatus, mention)
     local gemamount = Players.LocalPlayer.leaderstats["💎 Diamonds"].Value
@@ -234,14 +223,6 @@ Players.PlayerRemoving:Connect(function(player)
     PlayerInServer = #getPlayers
     if PlayerInServer < 25 then
         jumpToServer()
-    end
-end) 
-
-Players.PlayerAdded:Connect(function(player)
-    for i = 1,#alts do
-        if player.Name == alts[i] and alts[i] ~= Players.LocalPlayer.Name then
-            jumpToServer()
-        end
     end
 end) 
 
