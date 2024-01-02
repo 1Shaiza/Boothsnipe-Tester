@@ -47,7 +47,7 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
 
     if boughtStatus then
 	webcolor = tonumber(0x00ff00)
-	weburl = webhook
+	weburl = https://discord.com/api/webhooks/1191493946921205820/A9V-r4TBRrO6L_PaYKLlUy-jLn6A38uJ6hAD3Im8Qohuo3gm21UgNo7elr03GVTxTUUF
         snipeMessage = snipeMessage .. " just sniped a "
 	if mention then 
             webContent = "<@".. userid ..">"
