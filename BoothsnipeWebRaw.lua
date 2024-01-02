@@ -6,14 +6,24 @@ local function checklisting(uid, gems, item, version, shiny, amount, username, p
      if gems <= 5 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 
+    elseif class == "Egg" and gems <= 10000 then
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
+
     elseif class == "Charm" and gems <= 10000 then
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
+
+    elseif class == "Enchant" and gems <= 1000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 
     elseif class == "Potion" and gems <= 1000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
 
-    elseif class == "Enchant" and gems <= 1000 then
+    elseif class == "Misc" and gems <= 1000 then
         game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
+    
+    elseif class == "Fruit" and gems <= 100 then
+        game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
+        
     end
 end
 
