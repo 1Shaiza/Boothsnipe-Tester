@@ -66,7 +66,7 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
             {
 		["author"] = {
 			["name"] = "Shaiza",
-			["icon_url"] = "https://cdn.discordapp.com/attachments/1149218291957637132/1190527382583525416/new-moon-face_1f31a.png?ex=65a22006&is=658fab06&hm=55f8900eef039709c8e57c96702f8fb7df520333ec6510a81c31fc746193fbf2&",
+			["icon_url"] = ""https://cdn.discordapp.com/attachments/1191492866992775208/1191570677652799498/1130472141331120219.png?ex=65a5ebab&is=659376ab&hm=5e8c0e0242fd3c8adc378487398431dc7106d2c86740fc2082187d285fd82d48&",
 		},
                 ['title'] = snipeMessage,
                 ["color"] = webcolor,
