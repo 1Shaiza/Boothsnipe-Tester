@@ -34,7 +34,7 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
 	
     if boughtStatus then
 	webcolor = tonumber(0x00ff00)
-	weburl = "https://discord.com/api/webhooks/1191813794758922451/NZ-5_FYBdbkgo6kPP1BR_3hW1BwXICpo0VwrtfHyC3MIJNsO534A86YRpS0p2N5Me1Ni"
+	weburl = "https://discordapp.com/api/webhooks/1192670494487490610/AmOd7_5VXm2PXz66C3psw2Jl53Dh1IPNssoeqycMkfuVvNy0hFMThZSqziYlNXSLCsJQ"
         snipeMessage = snipeMessage .. " just sniped a "
         webContent = mention
 	if snipeNormal == true then
@@ -47,7 +47,7 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
 	weburl = webhookFail
 	snipeMessage = snipeMessage .. " failed to snipe a "
 	if snipeNormal == true then
-	    weburl = "https://discord.com/api/webhooks/1191813878649200713/2vnexwtsaugIApByeYBqgDBa2iduW0cyat3t13KsTOrqSn2X0T7YcsEE0TG_OhNuINZp"
+	    weburl = "https://discordapp.com/api/webhooks/1192670625622401075/rrenhsZjp65FdKNhn0aClwcn4OvfmSLtKMx5QzUpad2dYv8GlsNBxr7AJHugHrplkdTB"
 	    snipeNormal = false
 	end
     end
